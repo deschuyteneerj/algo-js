@@ -6,7 +6,7 @@ while (i < 100) {
 }
 
 /* PART 2
-for(var i = 2; i <= 100; i += 2){ 
-    console.log(i) 
+for(let var j = 2; j <= 100; j += 2){ 
+    console.log(j) 
     }
 */
