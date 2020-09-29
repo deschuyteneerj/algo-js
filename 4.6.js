@@ -1,6 +1,5 @@
 const readlineSync = require("readline-sync");
 
-
 /**
  * Calculate a factorial number
  * @author jonathan <https://github.com/deschuyteneerj/>
