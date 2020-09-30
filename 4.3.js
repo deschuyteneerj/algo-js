@@ -7,7 +7,7 @@ const readlineSync = require("readline-sync");
 
 function multiRand(n) {
     n = readlineSync.question("Enter a number for the number of elements into the array:");
-    array = []
+    array = [];
     for (let i=0; i<n; i++) {
         random = Math.floor(Math.random() * 10) + 1;
         array.push(random);

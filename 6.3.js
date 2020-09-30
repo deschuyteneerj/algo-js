@@ -23,14 +23,14 @@ class Rectangle {
 
 //Create n randomized rectangles
 function createRandomRectangle(n) {
-    let arrayRectangle = []
-    for(let i=0; i<n; i++) {
+    let arrayRectangle = [];
+    for (let i=0; i<n; i++) {
         arrayRectangle.push(new Rectangle(Math.floor((Math.random()*100)+1),
                                           Math.floor((Math.random()*100)+1),
                                           Math.floor((Math.random()*10)+1),
                                           Math.floor((Math.random()*50)+1)));
-        for(let j=0; j<arrayRectangle.length-1; j++) {
-            if(arrayRectangle[arrayRectangle.length-1].collide(arrayRectangle[j])) {
+        for (let j=0; j<arrayRectangle.length-1; j++) {
+            if (arrayRectangle[arrayRectangle.length-1].collide(arrayRectangle[j])) {
                 console.log("The rectangle " + arrayRectangle[arrayRectangle.length-1].identityOfRectangle()
                             + " collides with " + arrayRectangle[j].identityOfRectangle());
             }

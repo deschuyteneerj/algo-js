@@ -7,7 +7,7 @@ const readlineSync = require("readline-sync");
  */
 function multiRand(n) {
     n = readlineSync.question("Enter a number for the number of elements into the array:");
-    arr = []
+    arr = [];
     for (let i=0; i<n; i++) {
         random = Math.floor(Math.random() * 10) + 1;
         arr.push(random);
@@ -29,7 +29,7 @@ console.log(average(arr));
 /**
  * Return the minimum number of the array
  * @param {int} arr - the array
- * @param minArr - the minimum
+ * @param {int} minArr - the minimum
  */
 function min(arr) {
     const minArr= Math.min.apply(Math, arr);
@@ -40,7 +40,7 @@ console.log(min(arr));
 /**
  * Return the maximum number of the array
  * @param {int} arr - the array
- * @param maxArr - the maximum
+ * @param {int} maxArr - the maximum
  */
 function max(arr) {
     const maxArr= Math.max.apply(Math, arr);

@@ -3,17 +3,17 @@ const readlineSync = require("readline-sync");
 function guess(){
     let num = parseInt(Math.random() * 10 + 1);
     let stop = false;
-    do{
+    do {
         userGuess = readlineSync.question("Guess the number (1 to 10): ");
         if (userGuess == num){
             console.log("You guessed it!");
             stop = true;
         } else if (userGuess < num) {
-            console.log("Too low!")
+            console.log("Too low!");
         } else {
-            console.log("Too high!")
+            console.log("Too high!");
         }
-    }while (stop != true)
+    } while (stop != true)
 }
 
 guess();

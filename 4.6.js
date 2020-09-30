@@ -8,7 +8,7 @@ const readlineSync = require("readline-sync");
 x = readlineSync.question("Which factorial do you want to calculate?");
 
 function factorial(x) { 
-    if (x === 0){
+    if (x === 0) {
         return 1;
     }
     return x * factorial(x-1);        
