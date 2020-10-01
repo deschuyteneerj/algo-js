@@ -25,7 +25,7 @@ function menu() {
                 break;
         }
         if (menuChoice < 1 || menuChoice > 4) {
-            readlineSync.question("Please select a number between 1 and 4: ")
+            readlineSync.question("Please press a button to restart the menu.");
         } 
     }
 }
