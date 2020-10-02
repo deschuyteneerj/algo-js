@@ -14,7 +14,7 @@ class Circle {
     }
 
     surface() {
-        return Math.PI*Math.pow(this.radius,2);
+        return Math.PI*this.radius**2;
     }
 }
 
