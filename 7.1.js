@@ -1,19 +1,29 @@
 const readlineSync = require("readline-sync");
 
-function guess() {
+function randomNumber() {
     let num = parseInt(Math.random() * 10 + 1);
+    return num;
+}
+
+function guess() {
+    num = randomNumber();
     let stop = false;
-    do {
+    let onceAgain;
+    while (stop != true) {
         userGuess = readlineSync.question("Guess the number (1 to 10): ");
         if (userGuess == num) {
+            num = randomNumber();
             console.log("You guessed it!");
-            stop = true;
+            onceAgain = readlineSync.question("Once again? (y/n) ");
         } else if (userGuess < num) {
             console.log("Too low!");
         } else {
             console.log("Too high!");
         }
-    } while (stop != true)
+        if (onceAgain == "n") {
+            stop = true;
+        }
+    } 
 }
 
 guess();
