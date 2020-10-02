@@ -10,13 +10,13 @@ function menu() {
         menuChoice = parseInt(readlineSync.question("Hello! Welcome to the Pizza Flavors Manager.\n\n Please choose your actions:\n\n 1 - List all the pizza flavors.\n 2 - Add a new pizza flavor.\n 3 - Remove a pizza flavor.\n 4 - Exit the program.\n\n Enter your action's number: "));
         switch (menuChoice) {
             case 1 :
-                list();
+                listFlavor();
                 break;
             case 2 :
-                add();
+                addFlavor();
                 break;
             case 3 :
-                remove();
+                removeFlavor();
                 break;
             case 4 :
                 run = false;
@@ -30,20 +30,20 @@ function menu() {
     }
 }
 
-function list() {
+function listFlavor() {
     for (elem of pizzaFlavors) {
         console.log("\n"+(pizzaFlavors.indexOf(elem)+1 + ") " + elem));
     }
 }
 
-function add() {
+function addFlavor() {
     pizzaFlavors.push(readlineSync.question("Insert a new flavor: "));
     console.log("Your flavor has been added to the list.\n");
     console.log(pizzaFlavors);
 }
 
-function remove() {
-    let rmv = parseInt(readlineSync.question("Enter the flavor of the pizza you would like to remove: "));
+function removeFlavor() {
+    let rmv = parseInt(readlineSync.question("Enter the number of the element you would like to remove: "));
     pizzaFlavors.splice((rmv-1), 1);
     console.log("Here is your list of flavors: " + pizzaFlavors + "\n");
 }
